@@ -1,6 +1,8 @@
 let colorBlocks = document.getElementById('color-palette');
 let pixelBoard = document.getElementById('pixel-board');
 let buttonClear = document.getElementById('clear-board');
+let inputValue = document.getElementById('board-size');
+let buttonVqv = document.getElementById('generate-board');
 
 window.onload = blackBlock();
 window.onload = otherBlocks();
@@ -37,6 +39,8 @@ function pixelsFrame(){
     }
 }
 //Add and remove class selected
+//Consultei o repositório de Allan Carvalho para fazer esse item de uma forma mais dinâmica
+//https://github.com/tryber/sd-019-c-project-pixels-art/pull/5
 let colorSelected = 'rgba(0, 0, 0, 1)';
 function addSelected(blockSelected){
     let blockChild = colorBlocks.children
@@ -64,3 +68,20 @@ function clearFrame(){
     }
 }
 buttonClear.addEventListener('click', clearFrame);
+//Board invalid
+function testInvalid(){
+    if(inputValue.value < 0 || inputValue.value === ''){
+        alert('Board inválido!');
+    }
+}
+buttonVqv.addEventListener('click', testInvalid);
+// Size board
+function sizeBoard(){
+    let size = inputValue.value*inputValue.value;
+    for(let i = 0; i < size-25; i += 1){
+        let pixel = document.createElement('div');
+        pixel.className = 'pixel';
+        pixelBoard.appendChild(pixel);
+    }
+}
+buttonVqv.addEventListener('click', sizeBoard);

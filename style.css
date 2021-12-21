@@ -22,17 +22,17 @@ body {
     border-radius: 5px;
     background-color: teal;
     position: absolute;
-    left: 100px;
+    left: 280px;
     color: white;
 }
 #board-size{
     width: 100px;
     position: relative;
-    left: 250px;
+    left: 50px;
 }
 #generate-board {
     position: relative;
-    left: 70px;
+    left: 205px;
     border-radius: 5px;
     background-color: teal;
     color: white;
