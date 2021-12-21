@@ -36,7 +36,7 @@ function pixelsFrame(){
     }
 }
 //Add and remove class selected
-let colorSelected = '';
+let colorSelected = 'rgba(0, 0, 0, 1)';
 function addSelected(blockSelected){
     let blockChild = colorBlocks.children
     for(let i = 0; i<blockChild.length; i += 1){
@@ -45,7 +45,12 @@ function addSelected(blockSelected){
         }else {
             blockSelected.target.classList.add('selected')  
         }
-        colorSelected = getComputedStyle(blockSelected.target).backgroundColor
     }
+    colorSelected = getComputedStyle(blockSelected.target).backgroundColor
 }
 colorBlocks.addEventListener('click', addSelected);
+//pint black 
+function pintBlocks(pint){
+    pint.target.style.backgroundColor = colorSelected;
+}
+pixelBoard.addEventListener('click', pintBlocks);
