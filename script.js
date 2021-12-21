@@ -77,6 +77,11 @@ function testInvalid(){
 buttonVqv.addEventListener('click', testInvalid);
 // Size board
 function sizeBoard(){
+    if(inputValue.value < 5){
+        inputValue.value = 5;
+    }else if(inputValue.value > 50){
+        inputValue.value = 50;
+    }
     let size = inputValue.value*inputValue.value;
     for(let i = 0; i < size-25; i += 1){
         let pixel = document.createElement('div');
