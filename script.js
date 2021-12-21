@@ -1,6 +1,10 @@
 let colorBlocks = document.getElementById('color-palette');
 let pixelBoard = document.getElementById('pixel-board');
 
+window.onload = blackBlock();
+window.onload = otherBlocks();
+window.onload = pixelsFrame();
+
 //Black block fixed!
 function blackBlock(){
 let bloco1 = document.createElement('div');
@@ -31,7 +35,17 @@ function pixelsFrame(){
         pixelBoard.appendChild(pixel);
     }
 }
-
-blackBlock();
-otherBlocks();
-pixelsFrame();
+//Add and remove class selected
+let colorSelected = '';
+function addSelected(blockSelected){
+    let blockChild = colorBlocks.children
+    for(let i = 0; i<blockChild.length; i += 1){
+        if(blockChild[i].classList.contains('selected') && blockChild[i] !== blockSelected.target){
+            blockChild[i].classList.remove('selected')
+        }else {
+            blockSelected.target.classList.add('selected')  
+        }
+        colorSelected = getComputedStyle(blockSelected.target).backgroundColor
+    }
+}
+colorBlocks.addEventListener('click', addSelected);

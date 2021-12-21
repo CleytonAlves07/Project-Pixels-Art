@@ -14,14 +14,28 @@ body {
     position: relative;
     
 }
-#clear-board {
+#clear-board, #board-size, #generate-board {
+    font-size: x-small;
+    font-family:monospace;
+}
+#clear-board{
+    border-radius: 5px;
+    background-color: teal;
+    position: absolute;
+    left: 100px;
+    color: white;
+}
+#board-size{
+    width: 100px;
+    position: relative;
+    left: 250px;
+}
+#generate-board {
+    position: relative;
+    left: 70px;
     border-radius: 5px;
     background-color: teal;
     color: white;
-    position: absolute;
-    left: 180px;
-    font-size: x-small;
-    font-family:monospace;
 }
 .color {
     width: 30px;
