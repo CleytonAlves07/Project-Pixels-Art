@@ -1,5 +1,6 @@
 let colorBlocks = document.getElementById('color-palette');
 let pixelBoard = document.getElementById('pixel-board');
+let buttonClear = document.getElementById('clear-board');
 
 window.onload = blackBlock();
 window.onload = otherBlocks();
@@ -54,3 +55,12 @@ function pintBlocks(pint){
     pint.target.style.backgroundColor = colorSelected;
 }
 pixelBoard.addEventListener('click', pintBlocks);
+//Clear frame pixels
+let colorWhite = 'rgba(255, 255, 255, 1)';
+function clearFrame(){
+    let pixelsChild = pixelBoard.children
+    for(let i = 0; i<pixelsChild.length; i += 1){
+    pixelsChild[i].style.backgroundColor = colorWhite; 
+    }
+}
+buttonClear.addEventListener('click', clearFrame);
