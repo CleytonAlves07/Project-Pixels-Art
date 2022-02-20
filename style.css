@@ -1,89 +1,105 @@
 body {
-    margin: 0;
-    padding: 0;
-    font-family: monospace, Helvetica, sans-serif;
-    background-color: rgba(128, 128, 128, 0.5);
+  margin: 0;
+  padding: 0;
+  font-family: monospace, Helvetica, sans-serif;
+  background-color: rgba(128, 128, 128, 0.5);
+  border-radius: 10px;
 }
+
 #title {
-    text-align: center;
+  text-align: center;
 }
+
 #color-palette {
-    width: 180px;
-    height: 40px;
-    left: 70px;
-    position: relative;
-    
+  width: 280px;
+  height: 40px;
+  left: 20px;
+  position: relative;
 }
+
 label {
-    position: relative;
-    left: 40px;
+  position: relative;
+  left: 40px;
 }
-#buttons{
-    width: 300px;
-    height: 60px;
-    position: relative;
-    left: 30px;
+
+#buttons {
+  border: dotted 2px red;
+  width: 300px;
+  height: 60px;
+  position: relative;
+  top: 20px;
+  left: 30px;
 }
-#clear-board, #board-size, #generate-board, label{
-    font-size: x-small;
-    font-family:monospace;
+
+#clear-board , #board-size , #generate-board , label , #refresh {
+  font-size: x-small;
+  font-family:monospace;
 }
-#clear-board{
-    border-radius: 5px;
-    background-color: teal;
-    position: absolute;
-    left: 150px;
-    top: 50px;
-    color: white;
-    display: block;
-    
+
+#clear-board {
+  border-radius: 5px;
+  background-color: teal;
+  position: absolute;
+  left: 150px;
+  top: 50px;
+  color: white;
+  display: block;
 }
-#board-size{
-    width: 30px;
-    position: relative;
-    top: 20px;
-    left: -100px;
+
+#board-size {
+  width: 30px;
+  position: relative;
+  top: 20px;
+  left: -100px;
 }
+
 #generate-board {
-    position: relative;
-    left: 180px;
-    top: 20px;
-    border-radius: 5px;
-    background-color: teal;
-    color: white;
+  position: relative;
+  left: 180px;
+  top: 20px;
+  border-radius: 5px;
+  background-color: teal;
+  color: white;
 }
+
+#refresh {
+  background-color: teal;
+  color: white;
+}
+
 .color {
-    width: 30px;
-    height: 30px;
-    border: black solid 1px;
-    border-radius: 5px;
-    display: inline-block;
-    position: relative;
-    left: 30%;
-    top: 10px;
-    transform: translate(-50%, -50%);
-    margin-left: 10px;
-    
-    
+  width: 30px;
+  height: 30px;
+  border: black solid 1px;
+  border-radius: 5px;
+  display: inline-block;
+  position: relative;
+  left: 30%;
+  top: 10px;
+  transform: translate(-50%, -50%);
+  margin-left: 10px;
 }
+
 .black {
-    background-color: black;
+  background-color: black;
 }
+
 #pixel-board {
-    width: 230px;
-    height: 280px;
-    margin-left: 20px;
-    display: inline-block;
-    position: relative;
-    left: 20%;
-    top: 30px;
+  width: 230px;
+  height: 280px;
+  margin-left: 20px;
+  display: inline-block;
+  position: relative;
+  left: 20%;
+  top: 30px;
 }
+
 .pixel {
-    width: 40px;
-    height: 40px;
-    border: 1px black solid;
-    display: inline-block;
-    background-color: white;
-    margin-left: 0px;
-    margin-bottom: -4px;
+  width: 40px;
+  height: 40px;
+  border: 1px black solid;
+  display: inline-block;
+  background-color: white;
+  margin-left: 0px;
+  margin-bottom: -4px;
 }
